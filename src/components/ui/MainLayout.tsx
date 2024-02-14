@@ -1,13 +1,12 @@
 "use client"
 import { motion, MotionConfig, useReducedMotion } from "framer-motion"
 import { usePathname } from "next/navigation"
-import React, { createContext, useEffect, useState } from "react"
+import React, { useEffect, useState } from "react"
 
 import { Footer } from "../shared/Footer/Footer"
-import { GridPattern } from "./GridPattern"
-import Header1 from "../shared/Header/Header"
 
 function MainLayoutInner({ children }: { children: React.ReactNode }) {
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   let [expanded, setExpanded] = useState(false)
 
   let shouldReduceMotion = useReducedMotion()

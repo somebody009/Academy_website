@@ -72,7 +72,7 @@ export const socialMediaProfiles = [
 
 export function SocialMedia({ className, invert = false }: { className?: string; invert?: boolean }) {
   return (
-    <ul role="list" className={clsx("flex gap-x-8", invert ? "text-white" : "text-neutral-950", className)}>
+    <ul className={clsx("flex gap-x-8", invert ? "text-white" : "text-neutral-950", className)}>
       {socialMediaProfiles.map((socialMediaProfile) => (
         <li key={socialMediaProfile.title}>
           <Link
@@ -86,4 +86,5 @@ export function SocialMedia({ className, invert = false }: { className?: string;
       ))}
     </ul>
   )
+
 }

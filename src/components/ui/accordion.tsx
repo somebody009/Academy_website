@@ -1,11 +1,14 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 "use client"
 
+import clsx from "clsx"
+import { ChevronDown } from "lucide-react"
 import * as React from "react"
+import { useId } from "react"
+import { cn } from "@/lib/utils"
 import * as AccordionPrimitive from "../core/react-accordion"
 
-import { ChevronDown } from "lucide-react"
 
-import { cn } from "@/lib/utils"
 
 const Accordion = AccordionPrimitive.Root
 
@@ -31,7 +34,7 @@ const AccordionTrigger = React.forwardRef<
       {...props}
     >
       {children}
-      <ChevronDown className="h-4 w-4 transition-transform duration-200" />
+      <ChevronDown className="size-4 transition-transform duration-200" />
     </AccordionPrimitive.Trigger>
   </AccordionPrimitive.Header>
 ))
@@ -54,10 +57,7 @@ const AccordionContent = React.forwardRef<
 ))
 AccordionContent.displayName = AccordionPrimitive.Content.displayName
 
-export { Accordion, AccordionItem, AccordionTrigger, AccordionContent }
-;("use client;")
-import { useId, SVGProps } from "react"
-import clsx from "clsx"
+export { Accordion, AccordionItem, AccordionTrigger, AccordionContent };
 
 export function Logomark({ invert = false, filled = false, ...props }) {
   let id = useId()

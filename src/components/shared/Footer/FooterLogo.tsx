@@ -1,6 +1,7 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 "use client;"
-import { useId, SVGProps } from "react"
 import clsx from "clsx"
+import { SVGProps, useId } from "react"
 
 export function Logomark({ invert = false, filled = false, ...props }) {
   let id = useId()

@@ -4,17 +4,16 @@ import AnimatedTextH2 from "@/components/AnimatedTexts/AnimatedTextH2"
 import { BackgroundGradientAnimation } from "@/components/ui/background-gradient-animation"
 import { Container } from "@/components/ui/Container"
 import { Section } from "@/components/ui/Section"
-import { HeroBackground } from "./HomepageImages"
-import TrendingPrograms from "./TrendingPrograms"
 import HiringCompanies from "./HiringCompanies"
 import Rating from "./Rating"
+import TrendingPrograms from "./TrendingPrograms"
 
 export interface IHeroProps {}
 
-export default function Hero(props: IHeroProps) {
+export default function Hero() {
   return (
     <>
-      {/* <BackgroundGradientAnimation> */}
+      <BackgroundGradientAnimation>
       <Container className="inset-0 z-50  font-bold !text-black ">
         <Section className="bg-gradient-to-b from-white/80 to-white/20 bg-clip-text p-0 text-transparent ">
           <AnimatedTextH1
@@ -32,7 +31,7 @@ export default function Hero(props: IHeroProps) {
 
         {/* <HeroBackground /> */}
       </Container>
-      {/* </BackgroundGradientAnimation> */}
+      </BackgroundGradientAnimation>
     </>
   )
 }

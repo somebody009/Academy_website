@@ -1,10 +1,9 @@
-import { motion, sync, useCycle } from "framer-motion"
-import { usePathname } from "next/navigation"
+import { motion, useCycle } from "framer-motion"
 import * as React from "react"
-import { useDimensions } from "./use-dimensions";
 
 import { DesktopHamMenuItem } from "./DesktopHamMenuItem"
 import { MenuToggle } from "./MenuToggle"
+import { useDimensions } from "./use-dimensions";
 
 const variants = {
   open: {

@@ -4,12 +4,11 @@ import React from "react"
 import { Container } from "@/components/ui/Container"
 import { FadeIn } from "@/components/ui/FadeIn"
 import { navigationHomeDesktop } from "@/constants"
-import { AllCourse } from "./AllCourse"
-import { HeaderLogo } from "./HeaderLogo"
-import HeaderMenu2 from "./HeaderMenu2backup"
+// import { AllCourse } from "./AllCourse"
+import  HeaderLogo  from "./HeaderLogo"
 import { DesktopHamMenu } from "./rightmenu2/DesktopHamMenu"
 
-type Props = {}
+
 const DesktopNavigationMenu = () => {
   const pathname = usePathname()
 
@@ -34,7 +33,7 @@ const DesktopNavigationMenu = () => {
   )
 }
 
-const NavigationHomeDesktop = (props: Props) => {
+const NavigationHomeDesktop = () => {
   return (
     <div className="flex flex-row justify-between gap-8 self-center py-6 align-middle">
       <DesktopNavigationMenu />
@@ -48,6 +47,7 @@ const NavigationHomeDesktop = (props: Props) => {
   )
 }
 
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 function Header1({ className }: { className?: string }) {
   return (
     <>

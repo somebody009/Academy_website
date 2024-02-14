@@ -1,6 +1,6 @@
 import { cva, type VariantProps } from "class-variance-authority"
-import * as React from "react"
 import Link from "next/link"
+import * as React from "react"
 import { cn } from "@/lib/utils"
 
 const badgeVariants = cva(
@@ -31,6 +31,7 @@ function Badge({ className, variant, icon, asLink, href, ...props }: BadgeProps)
 
   return (
     <Component
+    // @ts-expect-error
       href={asLink ? href : undefined} // Render href attribute only if it's a Link
       className={cn(badgeVariants({ variant }), className)}
       {...props}

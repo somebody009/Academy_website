@@ -1,19 +1,12 @@
 import * as React from "react"
-import AnimatedText from "@/components/AnimatedTexts/AnimatedTextH1"
 
 export interface IHeroProps {}
 
 export function HeroBackground({
-  className,
-  invert = false,
-  filled = false,
-  fillOnHover = false,
+
   ...props
 }: {
-  className?: string
-  invert?: boolean
-  filled?: boolean
-  fillOnHover?: boolean
+  
 }) {
   return (
     <svg

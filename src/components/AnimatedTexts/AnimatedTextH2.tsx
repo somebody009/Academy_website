@@ -1,7 +1,7 @@
 "use client"
 import { motion, Variants } from "framer-motion"
 import React from "react"
-import { Container } from "../ui/Container"
+
 
 interface AnimatedTextH2Props {
   text: string

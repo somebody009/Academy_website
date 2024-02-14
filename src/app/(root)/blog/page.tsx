@@ -1,8 +1,7 @@
 import React from "react"
 
-type Props = {}
 
-const events = (props: Props) => {
+const events = () => {
   return <div>Blog</div>
 }
 

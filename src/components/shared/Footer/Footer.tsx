@@ -1,10 +1,10 @@
 import Link from "next/link"
 import { SVGProps } from "react"
+import { Logo } from "./FooterLogo"
+import { SocialMedia,  } from "./SocialMedia"
 import { Container } from "../../ui/Container"
 import { FadeIn } from "../../ui/FadeIn"
 
-import { Logo } from "./FooterLogo"
-import { SocialMedia, socialMediaProfiles } from "./SocialMedia"
 
 const navigation = [
   {
@@ -109,13 +109,13 @@ const reachus = [
 function Navigation() {
   return (
     <nav>
-      <ul role="list" className="grid w-full max-w-full grid-cols-2 gap-1 sm:grid-cols-2">
+      <ul className="grid w-full max-w-full grid-cols-2 gap-1 sm:grid-cols-2">
         {navigation.map((section) => (
           <li key={section.title}>
             <div className="font-display title_2 text-sm font-semibold tracking-wider text-[#CCCCCC]">
               {section.title}
             </div>
-            <ul role="list" className="mt-4 text-sm text-[#FFFFFF]">
+            <ul className="mt-4 text-sm text-[#FFFFFF]">
               {section.links.map((link) => (
                 <li key={link.title} className="mt-4">
                   <Link href={link.href} className="transition hover:text-[#006CE8]">
@@ -130,15 +130,15 @@ function Navigation() {
     </nav>
   )
 }
+
 function ReachUs() {
   return (
     <nav>
-      <p className="font-display title_2 text-sm  font-semibold text-[#CCCCCC]  ">Reach Us</p>
-      <ul role="list" className="grid w-full max-w-full grid-cols-2 gap-8 sm:grid-cols-2 ">
-        {" "}
+      <p className="font-display title_2 text-sm font-semibold text-[#CCCCCC]">Reach Us</p>
+      <ul className="grid w-full max-w-full grid-cols-2 gap-8 sm:grid-cols-2">
         {reachus.map((section) => (
           <li key={section.title} className="">
-            <ul role="list" className="mt-4 text-sm text-[#FFFFFF]">
+            <ul className="mt-4 text-sm text-[#FFFFFF]">
               {section.links.map((link) => (
                 <li key={link.title} className="mt-4 ">
                   <Link href={link.href} className="transition hover:text-[#006CE8]">

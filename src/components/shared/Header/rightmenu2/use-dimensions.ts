@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 
 // Define a type for dimensions
 type Dimensions = {
@@ -18,8 +18,10 @@ export const useDimensions = <T extends HTMLElement>(
       const resizeObserver = new ResizeObserver((entries) => {
         // Assuming only one target is being observed
         const entry = entries[0];
-        const { width, height } = entry.contentRect;
-        setDimensions({ width, height });
+        if (entry) {
+          const { width, height } = entry.contentRect;
+          setDimensions({ width, height });
+        }
       });
 
       resizeObserver.observe(element);

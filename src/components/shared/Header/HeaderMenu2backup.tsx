@@ -1,8 +1,8 @@
 // Accordion.tsx
 "use client"
-import React, { useState } from "react"
-import { motion, AnimatePresence } from "framer-motion"
+import { AnimatePresence, motion } from "framer-motion"
 import Link from "next/link"
+import React, { useState } from "react"
 
 const HeaderMenu2: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false)

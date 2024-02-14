@@ -65,10 +65,17 @@ module.exports = {
       },
     ],
   },
+  ignorePatterns: [
+    '/src/components/core/*',
+    // Add more paths if needed
+  ],
+  
+  
+
 }
 
 function getDirectoriesToSort() {
-  const ignoredSortingDirectories = [".git", ".next", ".vscode", "node_modules"]
+  const ignoredSortingDirectories = [".git", ".next", ".vscode", "node_modules ","core"]
   return getDirectories(process.cwd()).filter((f) => !ignoredSortingDirectories.includes(f))
 }
 

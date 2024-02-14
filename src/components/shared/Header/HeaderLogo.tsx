@@ -1,17 +1,20 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 "use client;"
 
-export function HeaderLogo({
+interface HeaderLogoProps {
+  className?: string
+  invert?: boolean
+  filled?: boolean
+  fillOnHover?: boolean
+}
+
+ const  HeaderLogo : React.FC<HeaderLogoProps> = ({
   className,
   invert = false,
   filled = false,
   fillOnHover = false,
   ...props
-}: {
-  className?: string
-  invert?: boolean
-  filled?: boolean
-  fillOnHover?: boolean
-}) {
+})=> {
   return (
     <svg xmlns="http://www.w3.org/2000/svg" width={276.88} height={39.857} {...props}>
       <g data-name="Group 422">
@@ -109,3 +112,5 @@ export function HeaderLogo({
     </svg>
   )
 }
+
+export default HeaderLogo;

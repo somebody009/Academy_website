@@ -1,4 +1,3 @@
-import { BADGE_CRITERIA } from "@/constants"
 
 export interface NavigationHome {
   route: string

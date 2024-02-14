@@ -1,6 +1,6 @@
 import { motion, SVGMotionProps } from "framer-motion"
 import * as React from "react"
-import { MouseEventHandler, useEffect, useRef } from "react"
+import { useRef } from "react"
 
 const Path = (
   props: React.JSX.IntrinsicAttributes &
