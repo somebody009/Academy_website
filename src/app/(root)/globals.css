@@ -1,0 +1,221 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body,
+p,
+a,
+ul,
+li,
+span,
+label,
+input {
+  font-family: var(--font_satoshi) !important;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--clashgrotesk) !important;
+  color: #000;
+}
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+
+    --border: 0 84.2% 60.2%%;
+    --input: 214.3 31.8% 91.4%;
+
+    --primary: 212.2 100.4% 50.2%;
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --ring: 215 20.2% 65.1%;
+
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+
+    --primary: 210 40% 98%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 85.7% 97.3%;
+
+    --ring: 217.2 32.6% 17.5%;
+  }
+}
+
+@layer utilities {
+  /* TYPOGRAPHY */
+  /* TYPOGRAPHY */
+  /* Heading Styles */
+  .h1 {
+    @apply text-4xl leading-[140%] md:text-5xl lg:text-6xl 2xl:text-7xl;
+  }
+
+  .h2 {
+    @apply text-3xl leading-[130%] md:text-4xl lg:text-5xl 2xl:text-6xl;
+  }
+
+  .h3 {
+    @apply text-2xl leading-[130%] md:text-3xl lg:text-4xl 2xl:text-5xl;
+  }
+
+  .h4 {
+    @apply text-xl leading-[130%] md:text-2xl lg:text-3xl 2xl:text-3xl;
+  }
+
+  .h5 {
+    @apply text-lg leading-[130%] md:text-xl lg:text-2xl 2xl:text-2xl;
+  }
+
+  .h6 {
+    @apply text-base leading-[130%] md:text-lg lg:text-xl 2xl:text-2xl;
+  }
+
+  /* Paragraph Styles */
+  .p {
+    @apply text-base font-normal leading-[150%] tracking-normal md:text-lg lg:text-xl;
+  }
+
+  /* Span Styles */
+  .span {
+    @apply text-sm font-normal leading-normal tracking-normal md:text-base lg:text-lg;
+  }
+
+  .base-semibold {
+    @apply text-[16px] font-semibold leading-[140%] tracking-tighter;
+  }
+
+  .base-medium {
+    @apply text-[16px] font-medium leading-[140%];
+  }
+
+  .base-regular {
+    @apply text-[16px] font-normal leading-[140%];
+  }
+
+  .body-bold {
+    @apply text-[18px] font-bold leading-[140%];
+  }
+
+  .body-medium {
+    @apply text-[18px] font-medium leading-[140%];
+  }
+
+  .small-semibold {
+    @apply text-[14px] font-semibold leading-[140%] tracking-tighter;
+  }
+
+  .small-medium {
+    @apply text-[14px] font-medium leading-[140%];
+  }
+
+  .small-regular {
+    @apply text-[14px] font-normal leading-[140%];
+  }
+
+  .subtle-semibold {
+    @apply text-[12px] font-semibold leading-[140%];
+  }
+
+  .tiny-medium {
+    @apply text-[10px] font-medium leading-[140%];
+  }
+
+  .tiny-regular {
+    @apply text-[10px] font-normal leading-[140%];
+  }
+
+  /* UTILITIES */
+  .invert-white {
+    @apply brightness-0 invert transition;
+  }
+
+  .flex-center {
+    @apply flex items-center justify-center;
+  }
+
+  .flex-between {
+    @apply flex items-center justify-between;
+  }
+
+  .flex-start {
+    @apply flex items-center justify-start;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar {
+    width: 3px;
+    height: 3px;
+    border-radius: 2px;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-track {
+    background: #09090a;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-thumb {
+    background: #5c5c7b;
+    border-radius: 50px;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+    background: #7878a3;
+  }
+
+  .common-container {
+    @apply custom-scrollbar flex flex-1 flex-col items-center gap-10 overflow-scroll px-5 py-10 md:px-8 lg:p-14;
+  }
+
+  /* All Users */
+  .user-container {
+    @apply flex w-full max-w-5xl flex-col items-start gap-6 md:gap-9;
+  }
+
+  .user-grid {
+    @apply xs:grid-cols-2 grid w-full max-w-5xl grid-cols-1 gap-7 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3;
+  }
+}
