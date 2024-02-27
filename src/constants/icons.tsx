@@ -257,3 +257,61 @@ export const LinkedInIcon: React.FC<InitialProps> = ({
     </svg>
   )
 }
+
+export const CalanderIcon: React.FC<InitialProps> = ({
+  title,
+  titleId,
+
+  ...props
+}) => {
+  return (
+    <svg xmlns="http://www.w3.org/2000/svg" width={24} height={24} fill="none" aria-labelledby={titleId} {...props}>
+      {title ? <title id={titleId}>{title}</title> : null}
+      <path
+        fill="#0C0C0C"
+        d="M21 8.5v9.25A3.25 3.25 0 0 1 17.75 21H6.25A3.25 3.25 0 0 1 3 17.75V8.5h18ZM7.25 15a1.25 1.25 0 1 0 0 2.5 1.25 1.25 0 0 0 0-2.5ZM12 15a1.25 1.25 0 1 0 0 2.5 1.25 1.25 0 0 0 0-2.5Zm-4.75-4.5a1.25 1.25 0 1 0 0 2.5 1.25 1.25 0 0 0 0-2.5Zm4.75 0a1.25 1.25 0 1 0 0 2.5 1.25 1.25 0 0 0 0-2.5Zm4.75 0a1.25 1.25 0 1 0 0 2.5 1.25 1.25 0 0 0 0-2.5Zm1-7.5A3.25 3.25 0 0 1 21 6.25V7H3v-.75A3.25 3.25 0 0 1 6.25 3h11.5Z"
+      />
+    </svg>
+  )
+}
+
+export const DurationIcon: React.FC<InitialProps> = ({ title, titleId, ...props }) => {
+  return (
+    <svg width={20} height={20} viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" {...props}>
+      <g clipPath="url(#clip0_3687_11739)">
+        <path d="M10 20c5.523 0 10-4.477 10-10S15.523 0 10 0 0 4.477 0 10s4.477 10 10 10z" fill="#4EAF25" />
+        <path
+          d="M17.692 10A7.692 7.692 0 112.31 10a7.692 7.692 0 0115.383 0z"
+          stroke="#fff"
+          strokeWidth={1.5}
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        />
+        <path
+          d="M12.854 12.446l-2.385-1.423A1.704 1.704 0 019.715 9.7V6.546"
+          stroke="#fff"
+          strokeWidth={1.5}
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        />
+      </g>
+      <defs>
+        <clipPath id="clip0_3687_11739">
+          <path fill="#fff" d="M0 0H20V20H0z" />
+        </clipPath>
+      </defs>
+    </svg>
+  )
+}
+
+export const TickIcon: React.FC<InitialProps> = ({ title, titleId, ...props }) => {
+  return (
+    <svg xmlns="http://www.w3.org/2000/svg" width={20} height={20} fill="none" aria-labelledby={titleId} {...props}>
+      {title ? <title id={titleId}>{title}</title> : null}
+      <path
+        fill="#41BF0B"
+        d="M8.197 1.695c.093.032.185.07.274.114l1.069.526c.29.143.63.143.92 0l1.069-.526a2.292 2.292 0 0 1 3.068 1.043l.061.136.053.139.383 1.128c.105.306.345.546.651.65l1.128.384a2.292 2.292 0 0 1 1.318 3.182l-.526 1.069c-.143.29-.143.63 0 .92l.526 1.069a2.292 2.292 0 0 1-1.318 3.182l-1.128.383a1.042 1.042 0 0 0-.65.651l-.384 1.128a2.292 2.292 0 0 1-3.182 1.318l-1.07-.526a1.042 1.042 0 0 0-.92 0l-1.068.526a2.292 2.292 0 0 1-3.182-1.318l-.384-1.128a1.042 1.042 0 0 0-.65-.65l-1.128-.384a2.292 2.292 0 0 1-1.318-3.182l.526-1.07c.143-.29.143-.63 0-.92l-.526-1.068a2.292 2.292 0 0 1 1.318-3.182l1.128-.384c.306-.104.546-.344.65-.65l.384-1.128a2.292 2.292 0 0 1 2.908-1.432Zm4.694 5.78L8.375 11.99 6.73 10.016a.625.625 0 1 0-.96.8l2.083 2.5a.625.625 0 0 0 .922.042l5-5a.625.625 0 1 0-.884-.883Z"
+      />
+    </svg>
+  )
+}

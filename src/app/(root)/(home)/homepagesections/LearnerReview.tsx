@@ -1,11 +1,11 @@
 import Image from "next/image"
+import Link from "next/link"
 import React, { useId } from "react"
 import { Card } from "@/components/ui/card"
 import { Container } from "@/components/ui/Container"
 import { InfiniteMoving } from "@/components/ui/InfiniteMoving"
 import { Section } from "@/components/ui/Section"
 import { learnersReviewLowerCarousel, learnersReviewUpperCarousel } from "@/constants"
-import Link from "next/link"
 
 const LearnerReview = () => {
   const id = useId()
@@ -82,16 +82,16 @@ const LearnerReview = () => {
         <h2 className="h4 text-center !font-medium text-black">We got featured!</h2>
         <div className="mx-auto flex flex-wrap justify-center gap-8 py-6 sm:flex-row sm:flex-nowrap">
           <Link href="/">
-            <Image src={"/images/ed.png"} className="w-[130px] sm:w-auto" alt="" width={300} height={300} />
+            <Image src={"/images/ed.png"} className="w-[160px] sm:w-auto" alt="" width={300} height={300} />
           </Link>
           <Link href="/">
-            <Image src={"/images/blogrizm.png"} className="w-[130px] sm:w-auto" alt="" width={300} height={300} />
+            <Image src={"/images/blogrizm.png"} className="w-[160px] sm:w-auto" alt="" width={300} height={300} />
           </Link>
           <Link href="/">
-            <Image src={"/images/mid-day.png"} className="w-[130px] sm:w-auto" alt="" width={300} height={300} />
+            <Image src={"/images/mid-day.png"} className="w-[160px] sm:w-auto" alt="" width={300} height={300} />
           </Link>
           <Link href="/">
-            <Image src={"/images/cio.png"} className="w-[130px] sm:w-auto" alt="" width={300} height={300} />
+            <Image src={"/images/cio.png"} className="w-[160px] sm:w-auto" alt="" width={300} height={300} />
           </Link>
         </div>
       </Container>

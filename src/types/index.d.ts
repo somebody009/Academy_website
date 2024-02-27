@@ -39,3 +39,17 @@ export interface LearnersReview {
   learner_review: string
   className?: string
 }
+export interface EventsProps {
+  className?: string
+  event_Name: string
+  event_Date: string
+  event_link: string
+  event_Image: string
+}
+
+export interface SkillupProps {
+  className?: string
+  course_Name: string
+  course_Duration: string
+  course_Link: string
+}

@@ -1,4 +1,12 @@
-import { HiringCompanies, IndustryExperts, LearnersReview, NavigationHome, TrendingPrograms } from "@/types"
+import {
+  EventsProps,
+  HiringCompanies,
+  IndustryExperts,
+  LearnersReview,
+  NavigationHome,
+  SkillupProps,
+  TrendingPrograms,
+} from "@/types"
 
 export const navigationHomeDesktop: NavigationHome[] = [
   {
@@ -253,5 +261,59 @@ export const learnersReviewLowerCarousel: LearnersReview[] = [
     learner_Image: "/images/trainer.png",
     learner_review:
       "I am from telecom profession and Zero in cybersecurity. but after attend two days (7th to 8th Aug 21) EH boot camp and webinar on 9th Aug21, I've learnt a lot which is useful for my startup career in cybersecurity domain. It was Very helpful for everyone. I recommend DSS as a best learning Platform not an institute. Hope will meet in another boot camp/webinar. Thanks to all of DSS member for provide career guidance and opportunity to us.",
+  },
+]
+
+export const upcomingEvents: EventsProps[] = [
+  {
+    event_Name: "Exploring cyber security career path (Both IT & non-IT)",
+    event_Date: "12 Jan, 2024",
+    event_link: "/",
+    event_Image: "/images/webinar2.png",
+  },
+  {
+    event_Name: "Exploring cyber security career path (Both IT & non-IT)",
+    event_Date: "12 Jan, 2024",
+    event_link: "/",
+    event_Image: "/images/webinar3.png",
+  },
+  {
+    event_Name: "Exploring cyber security career path (Both IT & non-IT)",
+    event_Date: "12 Jan, 2024",
+    event_link: "/",
+    event_Image: "/images/webinar1.png",
+  },
+]
+
+export const skillupCourses: SkillupProps[] = [
+  {
+    course_Name: "Course Name or Title",
+    course_Duration: "12 Jan, 2024",
+    course_Link: "/",
+  },
+  {
+    course_Name: "Course Name or Title",
+    course_Duration: "12 Jan, 2024",
+    course_Link: "/",
+  },
+  {
+    course_Name: "Course Name or Title",
+    course_Duration: "12 Jan, 2024",
+    course_Link: "/",
+  },
+  {
+    course_Name: "Course Name or Title",
+    course_Duration: "12 Jan, 2024",
+    course_Link: "/",
+  },
+  {
+    course_Name: "Course Name or Title",
+    course_Duration: "12 Jan, 2024",
+    course_Link: "/",
+  },
+  {
+    course_Name: "Course Name or Title  Course Name or Title",
+    course_Duration: "12 Jan, 2024",
+    course_Link: "/",
   },
 ]
