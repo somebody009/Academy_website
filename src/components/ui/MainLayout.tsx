@@ -32,18 +32,16 @@ function MainLayoutInner({ children }: { children: React.ReactNode }) {
           <Header1 className="" />
         </div>
       </header> */}
-       <main className="w-full flex-auto">{children}</main>
-       <motion.div layout className="relative isolate flex w-full flex-col pt-9">
-          {/* <GridPattern
+
+      <motion.div layout className=" relative isolate flex w-full flex-col">
+        {/* <GridPattern
             className="absolute inset-x-0 -top-14 -z-10 h-[1000px] w-full fill-[#705DED21] stroke-neutral-950/5"
             yOffset={-96}
             interactive
           /> */}
-
-         
-
-          <Footer />
-        </motion.div>
+        <main className="w-full flex-auto">{children}</main>
+        <Footer />
+      </motion.div>
 
       {/* <motion.div
         layout

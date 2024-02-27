@@ -21,7 +21,7 @@ export const InfiniteMoving = ({
 
   useEffect(() => {
     addAnimation()
-  // eslint-disable-next-line react-hooks/exhaustive-deps
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
   const [start, setStart] = useState(false)
   function addAnimation() {
@@ -61,17 +61,11 @@ export const InfiniteMoving = ({
     }
   }
   return (
-    <div
-      ref={containerRef}
-      className={cn(
-        "scroller relative z-20  max-w-full overflow-hidden  [mask-image:linear-gradient(to_right,transparent,white_20%,white_80%,transparent)]",
-        className
-      )}
-    >
+    <div ref={containerRef} className={cn("scroller relative z-20  max-w-full overflow-hidden  ", className)}>
       <div
         ref={scrollerRef}
         className={cn(
-          " flex w-max min-w-full shrink-0 flex-nowrap gap-6 py-4",
+          " flex w-max min-w-full shrink-0 flex-nowrap gap-10 py-2",
           start && "animate-scroll ",
           pauseOnHover && "hover:[animation-play-state:paused]"
         )}

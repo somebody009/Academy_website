@@ -37,16 +37,16 @@ const singleWord: Variants = {
 
 const AnimatedTextH1: React.FC<AnimatedTextH1Props> = ({ text, className = "" }) => {
   return (
-    <div className="mx-auto flex w-full items-center justify-center  overflow-hidden py-2 text-center sm:py-0">
+    <div className=" flex w-full items-center justify-center  overflow-hidden py-2 text-center sm:py-0">
       <Container>
         <motion.h1
-          className={`text-dark dark:text-light inline-block w-full h1 font-medium capitalize ${className}`}
+          className={`text-dark dark:text-light h1 inline-block w-full font-medium capitalize ${className}`}
           variants={quote}
           initial="initial"
           animate="animate"
         >
           {text.split(" ").map((word, index) => (
-            <motion.div key={word + "-" + index} className="!font-clashgrotesk inline-block" variants={singleWord}>
+            <motion.div key={word + "-" + index} className="inline-block !font-clashgrotesk" variants={singleWord}>
               {word}&nbsp;
             </motion.div>
           ))}

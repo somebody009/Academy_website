@@ -1,8 +1,10 @@
+"use client"
 import Image from "next/image"
 import * as React from "react"
 
 import { SVGProps } from "react"
-import { TrendingIconProps } from "./icontypes"
+import { cn } from "@/lib/utils"
+import { ChevronProps, InitialProps, OurProgramIcons, TrendingIconProps, TrustpilotRatingProps } from "./icontypes"
 
 export const TrendingIcon: React.FC<TrendingIconProps> = ({ color, width, height, title, altText, ...props }) => {
   const svgString = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="${color}" ${width ? `width="${width}"` : ""} ${height ? `height="${height}"` : ""} ${
@@ -22,11 +24,7 @@ export const TrendingIcon: React.FC<TrendingIconProps> = ({ color, width, height
   )
 }
 
-interface SVGRProps {
-  title?: string
-  titleId?: string
-}
-export const TrustpilotRating = ({ title, titleId, ...props }: SVGProps<SVGSVGElement> & SVGRProps) => (
+export const TrustpilotRating = ({ title, titleId, ...props }: SVGProps<SVGSVGElement> & TrustpilotRatingProps) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     xmlnsXlink="http://www.w3.org/1999/xlink"
@@ -55,3 +53,207 @@ export const TrustpilotRating = ({ title, titleId, ...props }: SVGProps<SVGSVGEl
     </defs>
   </svg>
 )
+
+export const RightChevron = ({ isChipHovered, ...props }: ChevronProps) => (
+  <svg xmlns="http://www.w3.org/2000/svg" width={18} height={18} fill="none" {...props}>
+    <path
+      fill="#0C0C0C"
+      className={cn("fill-[#000]  ", isChipHovered ? "fill-link" : "")}
+      d="M1.5 9a7.5 7.5 0 1 1 15 0 7.5 7.5 0 0 1-15 0Zm5.977 3.398c.22.22.576.22.796 0l3-3a.562.562 0 0 0 0-.796l-3-3a.562.562 0 1 0-.796.796L10.08 9l-2.602 2.602a.562.562 0 0 0 0 .796Z"
+    />
+  </svg>
+)
+
+export const BestSelling: React.FC<OurProgramIcons> = ({
+  title,
+  titleId,
+  hoverColor = "#0C0C0C",
+  isHovered,
+  ...props
+}) => {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width={73}
+      height={72}
+      fill={isHovered ? hoverColor : "#0C0C0C"} // Use hover color if hovered, otherwise default fill color
+      aria-labelledby={titleId}
+    >
+      {title ? <title id={titleId}>{title}</title> : null}
+      <circle cx={36.286} cy={36} r={35.64} fill="#F1FBFF" stroke="#fff" strokeWidth={0.72} />
+      <g className=" transition-fill duration-500 ease-in-out" fill={hoverColor} clipPath="url(#a)">
+        <path d="M56.845 28.076a4.445 4.445 0 0 0-2.422-2.685l-7.91-3.514a3.396 3.396 0 0 1-1.137-.824l-5.785-6.44a4.445 4.445 0 0 0-6.61 0l-5.785 6.44a3.396 3.396 0 0 1-1.138.824l-7.91 3.514a4.445 4.445 0 0 0-2.044 6.285l4.335 7.492c.238.41.386.864.435 1.336l.896 8.61A4.446 4.446 0 0 0 27.12 53l8.464-1.807c.462-.1.941-.1 1.404 0l8.467 1.807a4.445 4.445 0 0 0 5.346-3.884l.896-8.611c.05-.471.198-.927.436-1.336l4.334-7.492a4.456 4.456 0 0 0 .378-3.6Zm-35.29 10.898c-.058-.116-.116-.234-.18-.346l-4.335-7.492a3.362 3.362 0 0 1-.407-2.2l17.907 5.822-12.985 4.216Zm14.19 11.098c-.129.018-.258.036-.388.062l-8.464 1.81c-.75.156-1.53.054-2.214-.291L35.746 36.42v13.651Zm0-16.977-8.02-11.045c.093-.09.187-.18.273-.277l5.786-6.437a3.384 3.384 0 0 1 1.962-1.07v18.829Zm14.88 7.297-.9 8.611a3.354 3.354 0 0 1-.962 2.016L37.7 35.788l12.986 4.215a3.646 3.646 0 0 0-.062.389ZM37.7 33.732l8.021-11.048c.116.064.23.126.353.18l7.913 3.513c.699.314 1.27.856 1.62 1.537L37.7 33.732Z" />
+        <path d="M36.286 52.2a1.8 1.8 0 0 0-1.8 1.8v3.24a1.8 1.8 0 1 0 3.6 0V54a1.8 1.8 0 0 0-1.8-1.8ZM17.613 39.006 14.53 40.01a1.8 1.8 0 1 0 1.112 3.424l3.082-1.004a1.8 1.8 0 0 0-1.112-3.424ZM58.04 40.01l-3.082-1.004a1.8 1.8 0 1 0-1.113 3.424l3.082 1.004a1.8 1.8 0 0 0 1.113-3.424Zm-8.99-19.76 1.905-2.62a1.8 1.8 0 0 0-2.913-2.114l-1.904 2.62a1.8 1.8 0 1 0 2.912 2.114Zm-23.018.4a1.8 1.8 0 0 0 .4-2.513l-1.905-2.621a1.801 1.801 0 0 0-3.229 1.471c.061.233.17.452.317.642l1.904 2.621a1.804 1.804 0 0 0 2.513.4Z" />
+      </g>
+      <defs>
+        <clipPath id="a">
+          <path fill="#fff" d="M13.246 12.96h46.08v46.08h-46.08z" />
+        </clipPath>
+      </defs>
+    </svg>
+  )
+}
+
+export const CybersecurityIcon: React.FC<OurProgramIcons> = ({
+  title,
+  titleId,
+  hoverColor = "#0C0C0C",
+  isHovered,
+  ...props
+}) => {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      fill={isHovered ? hoverColor : "#0C0C0C"} // Use hover color if hovered, otherwise default fill color
+      width={72}
+      height={72}
+      aria-labelledby={titleId}
+      {...props}
+    >
+      {title ? <title id={titleId}>{title}</title> : null}
+      <circle cx="36" cy="36" r="35.64" fill="#F1FBFF" stroke="white" strokeWidth="0.72" />
+      <g className=" transition-fill duration-500 ease-in-out" fill={hoverColor} clipPath="url(#a)">
+        <path d="M17.292 45.395v.714c0 1.422 1.166 2.58 2.599 2.58h15.411c-.96-3.225-1.271-6.85-1.521-10.587.043-.606.368-.891.976-.856 3.534.698 7.12-.303 9.435-3.133V30.98a.716.716 0 0 0-.72-.71H19.208a.716.716 0 0 0-.719.71v13.598a.819.819 0 0 1-.819.817h-.377Zm14.043-26.48c3.695 0 7.239 1.464 10.058 3.814-.986-3.456-3.148-6.534-6.206-8.586a6.888 6.888 0 0 0-7.714-.004c-3.035 2.043-5.183 5.097-6.173 8.527 2.98-2.436 6.466-3.751 10.035-3.751Z" />
+        <path d="M26.866 21.34c-1.05 1.44-1.627 3.3-1.627 5.265 0 .688.072 1.368.213 2.03h11.776a9.695 9.695 0 0 0 .214-2.03c0-1.958-.574-3.812-1.618-5.252a13.113 13.113 0 0 0-4.41-.803c-1.543-.01-3.073.261-4.548.79ZM23.6 26.604c0-1.437.268-2.83.77-4.093a16.927 16.927 0 0 0-3.601 2.87 15.535 15.535 0 0 0 .001 3.252h3.012a11.368 11.368 0 0 1-.182-2.03Zm14.724-4.056c.493 1.253.756 2.633.756 4.056 0 .685-.062 1.364-.182 2.03h3.012c.11-1.05.113-2.11.009-3.16a16.736 16.736 0 0 0-3.595-2.926Zm6.773 21.733c-.63 0-1.142.526-1.142 1.173s.513 1.174 1.142 1.174c.63 0 1.142-.527 1.142-1.174 0-.647-.512-1.173-1.142-1.173Z" />
+        <path d="M45.09 35.576c-2.378 2.697-6.076 3.849-9.603 3.439.631 8.608 1.945 15.408 9.616 18.455 7.665-3.119 8.978-9.893 9.605-18.454-3.467.525-6.697-.632-9.617-3.44Zm.83 12.563.013 2.729a.819.819 0 0 1-.816.822h-.004a.819.819 0 0 1-.819-.814l-.013-2.735a2.81 2.81 0 0 1-1.965-2.686c0-1.549 1.248-2.809 2.781-2.809 1.534 0 2.781 1.26 2.781 2.81a2.81 2.81 0 0 1-1.958 2.683Zm-14.152 6.55h-7.957a.819.819 0 1 1 0-1.636h7.957a.819.819 0 1 1 0 1.635Zm3.073 4.351H31.37a.819.819 0 1 1 0-1.636h3.47a.818.818 0 1 1 0 1.636Z" />
+      </g>
+      <defs>
+        <clipPath id="a">
+          <path fill="#fff" d="M12.96 12.96h46.08v46.08H12.96z" />
+        </clipPath>
+      </defs>
+    </svg>
+  )
+}
+
+export const Datascience: React.FC<OurProgramIcons> = ({
+  title,
+  titleId,
+  hoverColor = "#0C0C0C",
+  isHovered,
+  ...props
+}) => {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      aria-labelledby={titleId}
+      {...props}
+      fill={isHovered ? hoverColor : "#0C0C0C"} // Use hover color if hovered, otherwise default fill color
+      width={72}
+      height={72}
+    >
+      {title ? <title id={titleId}>{title}</title> : null}
+      <circle cx={36} cy={36} r={35.64} fill="#F1FBFF" stroke="#fff" strokeWidth={0.72} />
+      <g className=" transition-fill duration-500 ease-in-out" fill={hoverColor} clipPath="url(#a)">
+        <path d="M43.7 20.552h.998a.452.452 0 0 0 0-.904h-.997a.452.452 0 0 0 0 .904Zm5.364 0h.998a.452.452 0 1 0 0-.904h-.998a.451.451 0 1 0 0 .904Zm-2.681 0h.997a.452.452 0 0 0 0-.904h-.998a.452.452 0 1 0 0 .904Zm5.258 0a4.193 4.193 0 0 1 4.189 4.188.452.452 0 1 0 .903 0 5.098 5.098 0 0 0-5.093-5.092.451.451 0 1 0 .001.904Z" />
+        <path d="M54.895 46.772a.512.512 0 0 0 .027-.163V24.744a3.287 3.287 0 0 0-3.28-3.289h-31.29a3.287 3.287 0 0 0-3.28 3.289v21.865c0 .054.01.109.028.163h37.795ZM20.353 24.744h31.289V43.78h-31.29V24.744Zm-5.134 22.931v.09a4.586 4.586 0 0 0 4.585 4.587h32.392a4.585 4.585 0 0 0 4.585-4.586v-.09H15.22Z" />
+        <path d="M23.145 37.023h4.707a.453.453 0 0 0 .452-.452v-6.623a.447.447 0 0 0-.452-.452h-4.707a.447.447 0 0 0-.452.452v6.623c0 .244.199.452.452.452Zm25.714-.904h-4.716a.453.453 0 0 0-.452.452v4.825a.46.46 0 0 0 .452.452h4.716a.46.46 0 0 0 .452-.452V36.57a.453.453 0 0 0-.452-.452Zm-12.86 1.449h-.096a3.367 3.367 0 0 1-1.928-.71l-1.231 1.232c.867.74 1.936 1.183 3.079 1.22a4.95 4.95 0 0 0 3.444-1.213l-1.243-1.237c-.09.04-.78.708-2.026.708Z" />
+        <path d="M32.7 34.148a3.266 3.266 0 0 1 2.846-3.146v-1.74a5.064 5.064 0 0 0-2.4.874l-3.323-3.323a.453.453 0 0 0-.32-.132h-6.36a.452.452 0 0 0 0 .903h6.174l3.128 3.128a4.997 4.997 0 0 0-1.493 3.38 4.976 4.976 0 0 0 1.145 3.367l1.251-1.251c-.47-.645-.675-1.315-.649-2.06Z" />
+        <path d="M33.606 34.173a2.402 2.402 0 0 0 2.305 2.487l.1.002c1.285 0 2.34-1.042 2.386-2.315.112-3.172-4.696-3.316-4.791-.174Z" />
+        <path d="M48.857 27.584a.452.452 0 1 0 0-.903h-6.36a.453.453 0 0 0-.32.132l-3.316 3.316a4.99 4.99 0 0 0-2.411-.89v1.767a3.31 3.31 0 0 1 2.852 3.377 3.45 3.45 0 0 1-.641 1.836l1.224 1.22c.703-.854 1.122-1.895 1.16-3.002.05-1.455-.536-2.771-1.49-3.725l3.127-3.128h6.175Zm-25.714 12.34h2.475a.452.452 0 0 0 0-.904h-2.476a.452.452 0 0 0 0 .904Zm4.713 1.016h-4.714a.452.452 0 0 0 0 .904h4.714a.452.452 0 0 0 0-.904Z" />
+        <path d="M48.857 29.497h-2.475a.452.452 0 0 0 0 .904h2.476a.452.452 0 1 0 0-.904Zm0 1.92h-4.713a.452.452 0 0 0 0 .904h4.713a.452.452 0 0 0 0-.904Z" />
+      </g>
+    </svg>
+  )
+}
+
+export const DigitalMarketing: React.FC<OurProgramIcons> = ({
+  title,
+  titleId,
+  hoverColor = "#0C0C0C",
+  isHovered,
+  ...props
+}) => {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      aria-labelledby={titleId}
+      fill={isHovered ? hoverColor : "#0C0C0C"} // Use hover color if hovered, otherwise default fill color
+      width={73}
+      height={72}
+      {...props}
+    >
+      {title ? <title id={titleId}>{title}</title> : null}
+      <circle cx={36.286} cy={36} r={35.64} fill="#F1FBFF" stroke="#fff" strokeWidth={0.72} />
+      <g className=" transition-fill duration-500 ease-in-out" fill={hoverColor} clipPath="url(#a)">
+        <path d="M26.609 51.667h2.765c1.075 0 1.997-.921 1.997-1.997l.768-8.755h-7.22c-.307 0-.768 0-1.075-.153l.768 8.908c0 1.076.922 1.997 1.997 1.997Zm18.432-3.993a2.426 2.426 0 0 0 2.458-2.458v-7.834c1.69-.307 2.918-1.69 2.918-3.379 0-1.69-1.229-3.072-2.919-3.379V22.79a2.426 2.426 0 0 0-2.457-2.457 2.426 2.426 0 0 0-2.458 2.457v22.426c0 1.382 1.23 2.458 2.458 2.458Z" />
+        <path d="m50.724 30.01 1.536-1.997c.307-.307.154-.768-.154-1.075-.307-.307-.767-.154-1.075.153l-1.536 1.997c-.307.307-.153.768.154 1.075.307.154.768.154 1.075-.153Zm.615 2.457c.153.308.46.615.921.461l2.458-.768c.46-.153.614-.46.46-.921-.153-.461-.46-.615-.921-.461l-2.458.768c-.46.153-.614.614-.46.921Zm2.918 4.608c.46.154.768-.153.922-.46.153-.461-.154-.769-.461-.922l-2.458-.768c-.46-.154-.768.154-.921.46-.154.462.153.769.46.922l2.458.768Zm-4.608.922c-.307.307-.307.768-.154 1.075l1.536 1.997c.308.307.768.307 1.075.153.308-.307.308-.767.154-1.075l-1.536-1.996c-.307-.461-.768-.461-1.075-.154Zm-30.106-1.383h1.997c.307 1.537 1.69 2.765 3.38 2.765h8.755c2.61.308 5.068 1.536 7.526 3.994v-18.74c-2.304 2.305-4.762 3.687-7.373 3.84H24.92a3.36 3.36 0 0 0-3.379 3.073h-1.997c-1.229 0-2.15.921-2.15 2.15v.768c0 1.229.921 2.15 2.15 2.15Zm10.445-3.225a.742.742 0 0 1 1.075 0 .742.742 0 0 1 0 1.075.742.742 0 0 1-1.075 0c-.307-.307-.154-.768 0-1.075Zm-2.457 0a.742.742 0 0 1 1.075 0 .742.742 0 0 1 0 1.075c-.154.307-.768.307-1.076 0a.742.742 0 0 1 0-1.075Zm-2.612 0a.742.742 0 0 1 1.075 0c.308.307.308.614.154.768-.154.46-.768.614-1.229.307a.742.742 0 0 1 0-1.075Z" />
+      </g>
+    </svg>
+  )
+}
+
+export const NetworkingCloud: React.FC<OurProgramIcons> = ({ title, titleId, hoverColor = "#0C0C0C" }) => {
+  const [isHovered, setIsHovered] = React.useState(false)
+
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      fill={isHovered ? hoverColor : "#0C0C0C"}
+      width={73}
+      height={72}
+      aria-labelledby={titleId}
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
+    >
+      {title ? <title id={titleId}>{title}</title> : null}
+      <circle cx={36.714} cy={36} r={35.64} fill="#F1FBFF" stroke="#fff" strokeWidth={0.72} />
+      <g className=" transition-fill duration-500 ease-in-out" fill={hoverColor} clipPath="url(#a)">
+        <path d="M53.994 43.2a4.32 4.32 0 0 0-4.06 2.88h-3.14v-5.76h-2.88v7.2a1.44 1.44 0 0 0 1.44 1.44h4.58a4.32 4.32 0 1 0 4.06-5.76Zm-31.68-5.76h28.8a7.2 7.2 0 0 0 2.88-13.78 7.2 7.2 0 0 0-6.177-3.5c-.372 0-.743.033-1.11.1a8.64 8.64 0 0 0-8.553-2.202A11.434 11.434 0 0 0 29.76 14.4a11.52 11.52 0 0 0-11.39 9.85 7.201 7.201 0 0 0-3.255 5.99 7.2 7.2 0 0 0 7.2 7.2Zm15.84 11.78v-8.9h-2.88v8.9a4.32 4.32 0 1 0 2.88 0Zm-11.52-.26h-3.139a4.32 4.32 0 1 0 0 2.88h4.58a1.44 1.44 0 0 0 1.44-1.44V40.32h-2.88v8.64Z" />
+      </g>
+    </svg>
+  )
+}
+
+export const Programing: React.FC<OurProgramIcons> = ({
+  title,
+  titleId,
+  hoverColor = "#0C0C0C",
+  isHovered,
+
+  ...props
+}) => {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width={73}
+      height={72}
+      aria-labelledby={titleId}
+      {...props}
+      fill={isHovered ? hoverColor : "#0C0C0C"} // Use hover color if hovered, otherwise default fill color
+    >
+      {title ? <title id={titleId}>{title}</title> : null}
+      <circle cx={36.714} cy={36} r={35.64} fill="#F1FBFF" stroke="#fff" strokeWidth={0.72} />
+      <g className=" transition-fill duration-500 ease-in-out" fill={hoverColor} clipPath="url(#a)">
+        <path d="M26.273 47.366a1.536 1.536 0 0 0 2.171-2.172l-4.778-4.778 4.778-4.778a1.536 1.536 0 0 0-2.171-2.172l-5.865 5.864a1.536 1.536 0 0 0 0 2.172l5.864 5.864Zm18.711 0a1.536 1.536 0 0 0 2.172 0l5.864-5.864a1.536 1.536 0 0 0 0-2.172l-5.864-5.864a1.536 1.536 0 0 0-2.172 2.172l4.779 4.778-4.779 4.779a1.536 1.536 0 0 0 0 2.171ZM33.38 48.755a1.537 1.537 0 0 0 1.996-.857l5.53-13.824a1.538 1.538 0 0 0-2.033-1.982 1.539 1.539 0 0 0-.82.842l-5.53 13.824a1.537 1.537 0 0 0 .857 1.997Z" />
+        <path d="M53.61 15.84H19.818a6.15 6.15 0 0 0-6.144 6.144v27.648a6.15 6.15 0 0 0 6.144 6.144H53.61a6.15 6.15 0 0 0 6.144-6.144V21.984a6.15 6.15 0 0 0-6.144-6.144Zm-23.024 4.608h.015a1.536 1.536 0 1 1-.015 0Zm-4.608 0h.015a1.536 1.536 0 1 1-.015 0Zm-4.608 0h.015a1.536 1.536 0 1 1-.015 0Zm35.312 29.184a3.075 3.075 0 0 1-3.072 3.072H19.818a3.075 3.075 0 0 1-3.072-3.072V28.128h39.936v21.504Z" />
+      </g>
+      <defs>
+        <clipPath id="a">
+          <path fill="#fff" d="M13.674 15.84h46.08v39.936h-46.08z" />
+        </clipPath>
+      </defs>
+    </svg>
+  )
+}
+
+export const LinkedInIcon: React.FC<InitialProps> = ({
+  title,
+  titleId,
+
+  ...props
+}) => {
+  return (
+    <svg xmlns="http://www.w3.org/2000/svg" width={48} height={48} fill="none" aria-labelledby={titleId} {...props}>
+      {title ? <title id={titleId}>{title}</title> : null}
+      <path
+        fill="#0B86CA"
+        d="M37.226 0H10.774C4.824 0 0 4.824 0 10.774v26.452C0 43.176 4.824 48 10.774 48h26.452C43.176 48 48 43.176 48 37.226V10.774C48 4.824 43.176 0 37.226 0Z"
+      />
+      <path
+        fill="#fff"
+        d="M13.301 19.952h4.988v16.094H13.3V19.952Zm2.544-7.998a2.893 2.893 0 1 1 0 5.787 2.893 2.893 0 0 1 0-5.787ZM21.481 19.951h4.805v2.195a5.253 5.253 0 0 1 4.739-2.594c4.988 0 6.002 3.326 6.002 7.665v8.829h-4.988v-7.781c0-1.863 0-4.273-2.594-4.273s-2.993 2.028-2.993 4.123v7.964h-4.988l.017-16.128Z"
+      />
+    </svg>
+  )
+}

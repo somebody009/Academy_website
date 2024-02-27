@@ -1,17 +1,21 @@
 import { FadeIn } from "@/components/ui/FadeIn"
-import { GridPattern } from "@/components/ui/GridPattern"
-import Hero from "./homepagesections/Hero"
+import OurPrograms from "./homepagesections/exploreprograms/OurPrograms"
+
+import Hero from "./homepagesections/Hero/Hero"
+import IndustryExperts from "./homepagesections/IndustryExperts"
+import LearnerReview from "./homepagesections/LearnerReview"
+import Lms from "./homepagesections/Lms"
 
 export default function Home() {
   return (
-    <FadeIn>
-      <GridPattern
-        className="absolute inset-x-0 -top-14 -z-10 h-[1000px] w-full fill-[#f4f9ffc7] stroke-neutral-950/5 text-black"
-        yOffset={26}
-        interactive
-      />
-
-      <Hero />
-    </FadeIn>
+    <>
+      <FadeIn>
+        <Hero />
+        <OurPrograms />
+        <IndustryExperts />
+        <Lms />
+        <LearnerReview />
+      </FadeIn>
+    </>
   )
 }

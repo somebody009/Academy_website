@@ -11,7 +11,7 @@ type Props = {
 export const Container: React.FC<Props> = ({ as: Component = "div", className, children }) => {
   return (
     <Component className={clsx("mx-auto max-w-full ", className)}>
-      <div className="mx-auto w-full max-w-2xl items-center justify-center lg:max-w-none">{children}</div>
+      <div className="mx-auto w-full items-center justify-center lg:max-w-none">{children}</div>
     </Component>
   )
 }
