@@ -16,7 +16,7 @@ const TrendingPrograms = () => {
               key={`${id}-${item.name}`}
               href={item.route}
               variant={"outline"}
-              className="small-regular md:base-regular border-border bg-[#ffffff] px-6 py-0.5 !shadow-none transition duration-300 ease-in-out hover:scale-110"
+              className="small-regular md:base-regular border-border bg-[#ffffff] px-6 py-0.5 !shadow-none transition duration-150 ease-in-out hover:scale-110"
               icon={<TrendingIcon title="Trending" altText="Trending" height={18} width={18} color={item.color} />}
             >
               <h3 className="!font-satoshi">{item.name}</h3>

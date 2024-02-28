@@ -19,7 +19,7 @@ const OurProgramCard = React.forwardRef<HTMLDivElement, OurProgramCardProps>(
       <div
         ref={ref}
         className={cn(
-          "group z-[999] w-auto max-w-[400px] flex-auto rounded-lg border-[3px] bg-card p-6  text-card-foreground opacity-100 shadow-sm transition duration-300 ease-in-out hover:scale-105  hover:border-[#0688d4] hover:shadow-xl hover:shadow-[#6a9fc2d7]   hover:transition hover:duration-300 hover:ease-in-out",
+          "group z-[999] w-auto max-w-[400px] flex-auto rounded-lg border-[3px] bg-card p-6  text-card-foreground opacity-100 shadow-sm transition duration-150 ease-in-out hover:scale-105  hover:border-[#0688d4] hover:shadow-xl hover:shadow-[#6a9fc2d7]   hover:transition hover:duration-150 hover:ease-in-out",
           className
         )}
         onMouseEnter={() => setIsHovered(true)}
