@@ -1,6 +1,6 @@
 var $dAvBt$babelruntimehelpersextends = require("@babel/runtime/helpers/extends")
 var $dAvBt$react = require("react")
-var $dAvBt$dssuireactcomposerefs = require("../../react-compose-refs")
+var $dAvBt$dssuireactcomposerefs = require("@react-compose-refs")
 
 function $parcel$export(e, n, v, s) {
   Object.defineProperty(e, n, {
