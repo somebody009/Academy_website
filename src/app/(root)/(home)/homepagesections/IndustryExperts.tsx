@@ -13,8 +13,10 @@ const IndustryExperts = () => {
   return (
     <Section className=" p-0 bg-grid-black/[0.05]">
       <Container>
-        <h2 className="h4 text-center !font-medium text-black">Get interactive classes by industry experts</h2>
-        <div className="  relative flex w-full flex-col  items-center justify-center overflow-hidden rounded-md bg-white/60 py-4 antialiased ">
+        <h2 className="h4 pt-8 text-center !font-medium text-black lg:pt-0">
+          Get interactive classes by industry experts
+        </h2>
+        <div className="  noise-bg relative flex w-full  flex-col items-center justify-center overflow-hidden rounded-md py-4 antialiased ">
           <InfiniteMoving direction="left" speed="slow" className="">
             {industryExperts.map((item) => {
               return (
@@ -22,7 +24,7 @@ const IndustryExperts = () => {
                   <div className="relative">
                     <Image
                       src={item.trainer_Image}
-                      className="border-b-none w-max rounded-t-lg shadow-sm"
+                      className="border-b-none !w-full rounded-t-lg shadow-sm"
                       alt={`${item.trainer_Name} - "Industry Experts"`}
                       width={360}
                       height={360}

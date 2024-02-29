@@ -216,7 +216,7 @@ h6 {
     @apply xs:grid-cols-2 grid w-full max-w-5xl grid-cols-1 gap-7 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3;
   }
   .noise-bg {
-    background: #fff url("/noise-bg.webp") repeat;
+    background: url("/noise-bg.webp") repeat;
   }
 
   .gradient-dark-background {

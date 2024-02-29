@@ -13,8 +13,8 @@ const UpcomingEvents = () => {
   const id = useId()
   return (
     <Section className="!py-0">
-      <Container className="p-4 sm:pb-12  bg-gradient-to-b from-[#c6ffae4d] to-[#ffffff]">
-        <h2 className="h4 pb-6 text-center !font-medium text-black">Upcoming Events</h2>
+      <Container className="bg-gradient-to-b from-[#c6ffae4d]  to-white/10 p-4 sm:pb-12">
+        <h2 className="h4 py-6 text-center !font-medium text-black sm:pt-0">Upcoming Events</h2>
         {/* <p className="mx-auto text-center md:max-w-5xl 3xl:max-w-6xl">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore Lorem
           ipsum dolor sit amet, consectetur adipiscing elit.

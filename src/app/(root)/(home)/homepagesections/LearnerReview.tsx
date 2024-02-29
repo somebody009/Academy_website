@@ -12,8 +12,8 @@ const LearnerReview = () => {
   return (
     <Section className=" p-0 bg-grid-black/[0.05]">
       <Container>
-        <h2 className="h4 text-center !font-medium text-black">Trusted by learners around the world</h2>
-        <div className="  relative flex w-full flex-col items-center  justify-center gap-2 overflow-hidden rounded-md bg-white/60 py-4 antialiased ">
+        <h2 className="h4 pt-8 text-center !font-medium text-black lg:pt-0">Trusted by learners around the world</h2>
+        <div className="  noise-bg relative flex w-full flex-col  items-center justify-center gap-2 overflow-hidden rounded-md  py-4 antialiased ">
           <InfiniteMoving direction="right" speed="slow" className="">
             {learnersReviewUpperCarousel.map((item, index) => {
               const isEven = index % 2 === 0 // Check if index is even
@@ -78,20 +78,44 @@ const LearnerReview = () => {
           </InfiniteMoving>
         </div>
       </Container>
-      <Container className="mt-12">
+      <Container className="mt-12 pb-4 sm:pb-0">
         <h2 className="h4 text-center !font-medium text-black">We got featured!</h2>
-        <div className="mx-auto flex flex-wrap justify-center gap-8 py-6 sm:flex-row sm:flex-nowrap">
+        <div className="mx-auto flex flex-wrap justify-center gap-4 py-6 sm:flex-row md:flex-nowrap lg:gap-8">
           <Link href="/">
-            <Image src={"/images/ed.png"} className="w-[160px] sm:w-auto" alt="" width={300} height={300} />
+            <Image
+              src={"/images/ed.png"}
+              className="w-[160px] rounded-xl shadow-[rgba(6,_8,_24,_0.08)_0px_9px_20px] sm:w-auto lg:max-w-72"
+              alt=""
+              width={300}
+              height={300}
+            />
           </Link>
           <Link href="/">
-            <Image src={"/images/blogrizm.png"} className="w-[160px] sm:w-auto" alt="" width={300} height={300} />
+            <Image
+              src={"/images/blogrizm.png"}
+              className="w-[160px] rounded-xl shadow-[rgba(6,_8,_24,_0.08)_0px_9px_20px]  sm:w-auto lg:max-w-72"
+              alt=""
+              width={300}
+              height={300}
+            />
           </Link>
           <Link href="/">
-            <Image src={"/images/mid-day.png"} className="w-[160px] sm:w-auto" alt="" width={300} height={300} />
+            <Image
+              src={"/images/mid-day.png"}
+              className="w-[160px] rounded-xl shadow-[rgba(6,_8,_24,_0.08)_0px_9px_20px] sm:w-auto lg:max-w-72"
+              alt=""
+              width={300}
+              height={300}
+            />
           </Link>
           <Link href="/">
-            <Image src={"/images/cio.png"} className="w-[160px] sm:w-auto" alt="" width={300} height={300} />
+            <Image
+              src={"/images/cio.png"}
+              className="w-[160px] rounded-xl  shadow-[rgba(6,_8,_24,_0.08)_0px_9px_20px] sm:w-auto lg:max-w-72"
+              alt=""
+              width={300}
+              height={300}
+            />
           </Link>
         </div>
       </Container>

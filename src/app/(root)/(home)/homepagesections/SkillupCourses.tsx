@@ -1,5 +1,6 @@
+"use client"
 import Link from "next/link"
-import React, { useId } from "react"
+import React, { useId, useState } from "react"
 import { Card } from "@/components/ui/card"
 import { Container } from "@/components/ui/Container"
 import { Section } from "@/components/ui/Section"
@@ -10,24 +11,34 @@ function SkillupCourses() {
   const id = useId()
   const colors = ["#ff9933", "#f52b02", "#00d1b9", "#b200f2", "#3977D4"]
 
+  // State to store the currently hovered card index
+  const [hoveredIndex, setHoveredIndex] = useState<number | null>(null)
   return (
     <Section>
-      <Container>
-        <h2 className="h4 my-2 text-center !font-medium text-black">Upskill yourself with our free courses</h2>
-        <div className="bg-white/60  bg-grid-black/[0.05] sm:p-1">
+      <Container className="">
+        <h2 className="h4 my-4 pb-2 text-center !font-medium text-black">Upskill yourself with our free courses</h2>
+        <div className="p-6 bg-grid-black/[0.05] sm:p-1">
           <div className="mx-auto flex w-full max-w-7xl flex-row flex-wrap items-center justify-center gap-4 overflow-hidden rounded-md p-4 py-8 sm:gap-8 ">
             {skillupCourses.map((item, index) => {
               const colorIndex = index % colors.length
               const bgColor = colors[colorIndex]
               return (
                 <Link href={item.course_Link} className="w-full sm:w-[320px]" key={`${id}-${item.course_Name}`}>
-                  <Card className={`border-2 p-6 pr-0 `}>
+                  <Card
+                    className="border-2 p-6 pr-0 transition-colors duration-300 "
+                    style={{
+                      borderColor: hoveredIndex === index ? bgColor : "transparent",
+                      transition: "border-color 0.3s ease-in",
+                    }}
+                    onMouseEnter={() => setHoveredIndex(index)}
+                    onMouseLeave={() => setHoveredIndex(null)}
+                  >
                     <div className="relative pr-6">
-                      <h6 className="body-medium relative mb-6 h-12  max-w-[250px] justify-center self-center  !font-medium ">
+                      <h6 className="body-medium relative mb-6 h-12 max-w-[250px] justify-center self-center !font-medium ">
                         {item.course_Name}
                       </h6>
                       <div
-                        className={`absolute left-[-1.53rem] top-0 h-full w-2 `}
+                        className="absolute left-[-1.53rem] top-0 h-full w-2"
                         style={{ backgroundColor: bgColor }}
                       ></div>
                     </div>{" "}

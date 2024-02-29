@@ -19,7 +19,7 @@ const OurProgramCard = React.forwardRef<HTMLDivElement, OurProgramCardProps>(
       <div
         ref={ref}
         className={cn(
-          "group z-[999] w-auto max-w-[400px] flex-auto rounded-lg border-[3px] bg-card p-6  text-card-foreground opacity-100 shadow-sm transition duration-150 ease-in-out hover:scale-105  hover:border-[#0688d4] hover:shadow-[0px_12px_32px_0px] hover:shadow-[#6982b8c5]   hover:transition hover:duration-150 hover:ease-in-out",
+          "group z-[999] w-auto flex-auto rounded-lg border-[3px] bg-card p-6 text-card-foreground  opacity-100 shadow-sm transition duration-150 ease-in-out hover:scale-105 hover:border-[#0688d4]  hover:shadow-[0px_12px_32px_0px] hover:shadow-[#6982b8c5] hover:transition   hover:duration-150 hover:ease-in-out sm:max-w-[275px] md:max-w-[340px]  lg:max-w-[400px]",
           className
         )}
         onMouseEnter={() => setIsHovered(true)}
@@ -73,7 +73,7 @@ const OurPrograms = () => {
         yOffset={0}
         interactive
       />
-      <Container className=" relative z-10 p-8 py-14">
+      <Container className=" relative z-10 p-6 py-14 sm:p-6 md:p-8">
         <h2 className="h4 my-2 text-center !font-medium text-white">Explore our programs</h2>
         <div className="mx-auto mt-4 flex flex-wrap justify-center gap-4 align-middle md:mt-8  md:gap-6 2xl:max-w-screen-2xl">
           {ourPrograms.map((item) => {

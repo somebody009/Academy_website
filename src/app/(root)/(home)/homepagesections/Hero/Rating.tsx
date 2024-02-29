@@ -38,8 +38,9 @@ const ratingName = [
 
 const Rating = () => {
   return (
-    <Container className="!p-0">
-      <div className="w-100 bg-gradient-to-b from-[#C6FFAE00] to-[#C6FFAE4D] p-6 !pb-20  !opacity-100 md:p-4 lg:p-16 ">
+    <Container className="!p-0 ">
+      <h2 className="h5 mt-2 text-center !font-medium text-black">Trust Ratings</h2>
+      <div className="w-100  bg-gradient-to-b from-[#C6FFAE00] to-[#C6FFAE4D] p-6  !pb-20  !opacity-100 md:p-2 lg:p-16 lg:pt-4 ">
         <div className="flex flex-row flex-wrap justify-center gap-3  md:flex-row md:gap-7">
           {ratingName.map((item) => {
             return (

@@ -8,7 +8,9 @@ const HiringCompanies = () => {
   const id = useId()
   return (
     <Container>
-      <h2 className="h4 mt-6 px-4 text-center !font-medium lg:mt-16">Ignite Your Career With Top Hiring Companies</h2>
+      <h2 className="h4 mt-6 px-4 text-center !font-medium text-black lg:mt-16">
+        Ignite Your Career With Top Hiring Companies
+      </h2>
       <div className="rounded-md] relative flex flex-col items-center justify-center overflow-hidden antialiased  [mask-image:linear-gradient(to_right,transparent,white_20%,white_90%,transparent)]">
         <InfiniteMoving direction="left" speed="normal" pauseOnHover={false}>
           {hiringCompanies.map((item) => {
@@ -20,6 +22,7 @@ const HiringCompanies = () => {
                 title={item.title}
                 width={125}
                 height={125}
+                className="!size-20 md:!size-[120px]"
               />
             )
           })}
