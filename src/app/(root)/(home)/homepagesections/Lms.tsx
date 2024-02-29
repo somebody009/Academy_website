@@ -4,7 +4,7 @@ import { Section } from "@/components/ui/Section"
 
 const Lms = () => {
   return (
-    <Section className="bg-white">
+    <Section className="">
       {" "}
       <Container className="  p-6 !opacity-100 ">
         <h2 className="h4 text-center !font-medium text-black">Get immersive learning experience</h2>

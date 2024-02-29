@@ -19,7 +19,7 @@ const OurProgramCard = React.forwardRef<HTMLDivElement, OurProgramCardProps>(
       <div
         ref={ref}
         className={cn(
-          "group z-[999] w-auto max-w-[400px] flex-auto rounded-lg border-[3px] bg-card p-6  text-card-foreground opacity-100 shadow-sm transition duration-150 ease-in-out hover:scale-105  hover:border-[#0688d4] hover:shadow-xl hover:shadow-[#6a9fc2d7]   hover:transition hover:duration-150 hover:ease-in-out",
+          "group z-[999] w-auto max-w-[400px] flex-auto rounded-lg border-[3px] bg-card p-6  text-card-foreground opacity-100 shadow-sm transition duration-150 ease-in-out hover:scale-105  hover:border-[#0688d4] hover:shadow-[0px_12px_32px_0px] hover:shadow-[#6982b8c5]   hover:transition hover:duration-150 hover:ease-in-out",
           className
         )}
         onMouseEnter={() => setIsHovered(true)}
@@ -67,9 +67,9 @@ const OurPrograms = () => {
   const id = useId()
 
   return (
-    <Section className="relative !py-0">
+    <Section className=" relative !py-0">
       <GridPattern
-        className="absolute inset-0 z-[-10] size-full bg-blue-primary fill-[#00266327] stroke-[#e0e5f20a] text-black"
+        className="gradient-dark-background absolute inset-0 z-[-10] size-full  fill-[#00266327] stroke-[#e0e5f20a] text-black"
         yOffset={0}
         interactive
       />

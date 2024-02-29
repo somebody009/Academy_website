@@ -11,10 +11,10 @@ import { LinkedInIcon } from "@/constants/icons"
 const IndustryExperts = () => {
   const id = useId()
   return (
-    <Section className=" bg-white p-0 bg-grid-black/[0.05]">
+    <Section className=" p-0 bg-grid-black/[0.05]">
       <Container>
         <h2 className="h4 text-center !font-medium text-black">Get interactive classes by industry experts</h2>
-        <div className="  relative flex w-full flex-col  items-center justify-center overflow-hidden rounded-md bg-white py-4 antialiased ">
+        <div className="  relative flex w-full flex-col  items-center justify-center overflow-hidden rounded-md bg-white/60 py-4 antialiased ">
           <InfiniteMoving direction="left" speed="slow" className="">
             {industryExperts.map((item) => {
               return (

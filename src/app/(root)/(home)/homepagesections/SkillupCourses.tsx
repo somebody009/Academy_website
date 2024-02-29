@@ -14,7 +14,7 @@ function SkillupCourses() {
     <Section>
       <Container>
         <h2 className="h4 my-2 text-center !font-medium text-black">Upskill yourself with our free courses</h2>
-        <div className="bg-white  bg-grid-black/[0.05] sm:p-1">
+        <div className="bg-white/60  bg-grid-black/[0.05] sm:p-1">
           <div className="mx-auto flex w-full max-w-7xl flex-row flex-wrap items-center justify-center gap-4 overflow-hidden rounded-md p-4 py-8 sm:gap-8 ">
             {skillupCourses.map((item, index) => {
               const colorIndex = index % colors.length

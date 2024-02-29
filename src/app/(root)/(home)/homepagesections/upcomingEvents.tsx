@@ -6,20 +6,20 @@ import { Card } from "@/components/ui/card"
 import { Container } from "@/components/ui/Container"
 import { Section } from "@/components/ui/Section"
 
-import { CalanderIcon } from "@/constants/icons"
 import { upcomingEvents } from "@/constants"
+import { CalanderIcon } from "@/constants/icons"
 
 const UpcomingEvents = () => {
   const id = useId()
   return (
-    <Section>
-      <Container className="p-4 sm:p-0">
+    <Section className="!py-0">
+      <Container className="p-4 sm:pb-12  bg-gradient-to-b from-[#c6ffae4d] to-[#ffffff]">
         <h2 className="h4 pb-6 text-center !font-medium text-black">Upcoming Events</h2>
         {/* <p className="mx-auto text-center md:max-w-5xl 3xl:max-w-6xl">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore Lorem
           ipsum dolor sit amet, consectetur adipiscing elit.
         </p> */}
-        <div className="mx-auto flex w-full flex-row flex-wrap  items-center justify-center gap-8 overflow-hidden rounded-md bg-white py-4 2xl:max-w-7xl">
+        <div className="mx-auto flex w-full flex-row flex-wrap  items-center justify-center gap-8 overflow-hidden rounded-md py-4 2xl:max-w-7xl">
           {upcomingEvents.map((item) => {
             return (
               <Link href={item.event_link} key={`${id}-${item.event_Name}`}>

@@ -9,7 +9,7 @@ const HiringCompanies = () => {
   return (
     <Container>
       <h2 className="h4 mt-6 px-4 text-center !font-medium lg:mt-16">Ignite Your Career With Top Hiring Companies</h2>
-      <div className="relative flex flex-col items-center justify-center overflow-hidden rounded-md bg-white/[0.5] antialiased  [mask-image:linear-gradient(to_right,transparent,white_20%,white_90%,transparent)]">
+      <div className="rounded-md] relative flex flex-col items-center justify-center overflow-hidden antialiased  [mask-image:linear-gradient(to_right,transparent,white_20%,white_90%,transparent)]">
         <InfiniteMoving direction="left" speed="normal" pauseOnHover={false}>
           {hiringCompanies.map((item) => {
             return (

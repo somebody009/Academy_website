@@ -315,3 +315,21 @@ export const TickIcon: React.FC<InitialProps> = ({ title, titleId, ...props }) =
     </svg>
   )
 }
+
+
+
+export const NoiseBg = (props: SVGProps<SVGSVGElement>) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width={120}
+    height={120}
+    fill="none"
+    {...props}
+  >
+    <g opacity={0.05}>
+      <path fill="#fff" d="M0 0h120v120H0z" />
+      <path stroke="#E0E5F2" strokeOpacity={0.16} d="M.5.5h119v119H.5z" />
+    </g>
+  </svg>
+)
+

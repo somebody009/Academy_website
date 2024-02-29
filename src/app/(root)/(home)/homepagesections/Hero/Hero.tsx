@@ -27,7 +27,7 @@ export default function Hero() {
               text="Unlock High-Demand Tech Skills Effortlessly! "
             />
             <AnimatedText2
-              className="max-w-100 mt-2 p-4 text-black md:mt-6 md:max-w-5xl 3xl:max-w-6xl"
+              className="max-w-100  p-4 text-black md:max-w-5xl 3xl:max-w-6xl"
               text="DataSpace Academy, the education arm of Satts Cyber Technology Private Limited, provides over 100 courses to cultivate skilled professionals aligned with the latest global trends, ensuring their impact in the industry."
             />
             <TrendingPrograms />
