@@ -12,15 +12,15 @@ const IndustryExperts = () => {
   const id = useId()
   return (
     <Section className=" p-0 bg-grid-black/[0.05]">
-      <Container>
-        <h2 className="h4 pt-8 text-center !font-medium text-black lg:pt-0">
+      <Container className="!p-0 ">
+        <h2 className="h4  pt-8 text-center !font-medium text-black lg:pt-0">
           Get interactive classes by industry experts
         </h2>
         <div className="  noise-bg relative flex w-full  flex-col items-center justify-center overflow-hidden rounded-md py-4 antialiased ">
           <InfiniteMoving direction="left" speed="slow" className="">
             {industryExperts.map((item) => {
               return (
-                <Card className="!w-[320px]" key={`${id}-${item.trainer_Name}`}>
+                <Card className="!max-h-[295px] !w-[320px]" key={`${id}-${item.trainer_Name}`}>
                   <div className="relative">
                     <Image
                       src={item.trainer_Image}
@@ -39,9 +39,9 @@ const IndustryExperts = () => {
                     </Link>
                   </div>
 
-                  <div className="flex flex-col gap-4 p-4">
+                  <div className="flex flex-col gap-2 p-4">
                     <h5 className="h5 !font-medium">{item.trainer_Name}</h5>
-                    <p className="p">{item.trainer_Designation}</p>
+                    <p className="p base-regular">{item.trainer_Designation}</p>
                   </div>
                 </Card>
               )

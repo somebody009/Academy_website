@@ -272,13 +272,13 @@ export const upcomingEvents: EventsProps[] = [
     event_Image: "/images/webinar2.png",
   },
   {
-    event_Name: "Exploring cyber security career path (Both IT & non-IT)",
+    event_Name: "Exploring DataScience career path (Both IT & non-IT)",
     event_Date: "12 Jan, 2024",
     event_link: "/",
     event_Image: "/images/webinar3.png",
   },
   {
-    event_Name: "Exploring cyber security career path (Both IT & non-IT)",
+    event_Name: "Exploring Digital Marketing career path (Both IT & non-IT)",
     event_Date: "12 Jan, 2024",
     event_link: "/",
     event_Image: "/images/webinar1.png",
@@ -287,27 +287,27 @@ export const upcomingEvents: EventsProps[] = [
 
 export const skillupCourses: SkillupProps[] = [
   {
-    course_Name: "Course Name or Title",
+    course_Name: "DM or Title",
     course_Duration: "12 Jan, 2024",
     course_Link: "/",
   },
   {
-    course_Name: "Course Name or Title",
+    course_Name: "Course or Title",
     course_Duration: "12 Jan, 2024",
     course_Link: "/",
   },
   {
-    course_Name: "Course Name or Title",
+    course_Name: " Name or Title",
     course_Duration: "12 Jan, 2024",
     course_Link: "/",
   },
   {
-    course_Name: "Course Name or Title",
+    course_Name: "Data Science  or Title",
     course_Duration: "12 Jan, 2024",
     course_Link: "/",
   },
   {
-    course_Name: "Course Name or Title",
+    course_Name: "Cyber Security or Title",
     course_Duration: "12 Jan, 2024",
     course_Link: "/",
   },

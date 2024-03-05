@@ -69,11 +69,11 @@ const OurPrograms = () => {
   return (
     <Section className=" relative !py-0">
       <GridPattern
-        className="gradient-dark-background absolute inset-0 z-[-10] size-full  fill-[#00266327] stroke-[#e0e5f20a] text-black"
+        className="gradient-dark-background absolute inset-0 z-[-10] size-full  fill-[#0142ac27] stroke-[#e0e5f20a] text-black"
         yOffset={0}
         interactive
       />
-      <Container className=" relative z-10 p-6 py-14 sm:p-6 md:p-8">
+      <Container className="relative z-10  py-14 ">
         <h2 className="h4 my-2 text-center !font-medium text-white">Explore our programs</h2>
         <div className="mx-auto mt-4 flex flex-wrap justify-center gap-4 align-middle md:mt-8  md:gap-6 2xl:max-w-screen-2xl">
           {ourPrograms.map((item) => {

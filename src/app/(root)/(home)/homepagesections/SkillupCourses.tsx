@@ -1,6 +1,7 @@
 "use client"
 import Link from "next/link"
-import React, { useId, useState } from "react"
+import React, { useState } from "react"
+import { v4 as uuidv4 } from "uuid"
 import { Card } from "@/components/ui/card"
 import { Container } from "@/components/ui/Container"
 import { Section } from "@/components/ui/Section"
@@ -8,20 +9,20 @@ import { skillupCourses } from "@/constants"
 import { DurationIcon } from "@/constants/icons"
 
 function SkillupCourses() {
-  const id = useId()
   const colors = ["#ff9933", "#f52b02", "#00d1b9", "#b200f2", "#3977D4"]
 
   // State to store the currently hovered card index
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null)
   return (
-    <Section>
-      <Container className="">
-        <h2 className="h4 my-4 pb-2 text-center !font-medium text-black">Upskill yourself with our free courses</h2>
-        <div className="p-6 bg-grid-black/[0.05] sm:p-1">
-          <div className="mx-auto flex w-full max-w-7xl flex-row flex-wrap items-center justify-center gap-4 overflow-hidden rounded-md p-4 py-8 sm:gap-8 ">
+    <Section className="">
+      <h2 className="h4 my-4 pb-2 text-center !font-medium text-black">Upskill yourself with our free courses</h2>
+      <Container className="bg-grid-black/[0.05] sm:!p-0">
+        <div className="p-6  sm:p-1">
+          <div className="mx-auto flex w-full max-w-7xl flex-row flex-wrap items-center justify-center gap-4 overflow-hidden rounded-md py-8 sm:gap-8 sm:p-4 ">
             {skillupCourses.map((item, index) => {
               const colorIndex = index % colors.length
               const bgColor = colors[colorIndex]
+              const id = uuidv4()
               return (
                 <Link href={item.course_Link} className="w-full sm:w-[320px]" key={`${id}-${item.course_Name}`}>
                   <Card

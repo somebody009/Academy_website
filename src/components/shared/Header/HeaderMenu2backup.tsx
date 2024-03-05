@@ -11,7 +11,12 @@ const HeaderMenu2: React.FC = () => {
     setIsOpen((prev) => !prev)
   }
 
-  ;<button className="rounded-md bg-[#FBFBFB] p-2 text-white" onClick={toggleAccordion}>
+  ;<button
+    title="Toggle Accordion"
+    type="button"
+    className="rounded-md bg-[#FBFBFB] p-2 text-white"
+    onClick={toggleAccordion}
+  >
     <div className="">
       <svg xmlns="http://www.w3.org/2000/svg" width={22} height={22}>
         {isOpen ? (
@@ -34,7 +39,12 @@ const HeaderMenu2: React.FC = () => {
   </button>
   return (
     <div className="relative">
-      <button className="rounded-md bg-[#FBFBFB] p-2 text-white" onClick={toggleAccordion}>
+      <button
+        title="Toggle Accordion"
+        type="button"
+        className="rounded-md bg-[#FBFBFB] p-2 text-white"
+        onClick={toggleAccordion}
+      >
         <div className="">
           <svg xmlns="http://www.w3.org/2000/svg" width={22} height={22}>
             {isOpen ? (

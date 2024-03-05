@@ -6,7 +6,7 @@ const Lms = () => {
   return (
     <Section className="">
       {" "}
-      <Container className="  p-6 !opacity-100 ">
+      <Container className="p-6 !opacity-100 ">
         <h2 className="h4 text-center !font-medium text-black">Get immersive learning experience</h2>
         <p className="mx-auto text-center md:max-w-5xl 3xl:max-w-6xl">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore Lorem

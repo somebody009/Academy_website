@@ -1,6 +1,7 @@
 import Image from "next/image"
 import React from "react"
-import { Button } from "@/components/ui/button"
+
+import Button from "@/components/ui/button"
 import { Container } from "@/components/ui/Container"
 import { Section } from "@/components/ui/Section"
 import { TickIcon } from "@/constants/icons"
@@ -26,7 +27,7 @@ const DownloadApp = () => {
                 Enroll free skill-up courses
               </li>
             </ul>
-            <Button variant={"default"} size={"lg"}>
+            <Button variant={"default"} size={"large"}>
               Download the app now
             </Button>
           </div>

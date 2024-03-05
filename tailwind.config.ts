@@ -19,10 +19,13 @@ const config = {
         "2.5xl": "1536px",
         "3xl": "1850px",
       },
+      boxShadow: {
+        "hero-card": "0px 4px 40.9px 0px rgba(0, 0, 0, 0.12)",
+      },
       colors: {
         blue: {
           primary: "#03080D",
-          secondary: "",
+          secondary: "#0077E5",
         },
         border: "#EBEBEB",
         input: "hsl(var(--input))",
